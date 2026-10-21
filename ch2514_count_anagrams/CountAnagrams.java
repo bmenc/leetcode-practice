@@ -29,6 +29,7 @@
 */
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CountAnagrams {
@@ -51,7 +52,11 @@ public class CountAnagrams {
         long numerator = factorial(n);
         long denominator = 1;
 
-        Map<Character, Integer> counts = new HashMap();
+        // Map<Character, Integer> counts = new HashMap();
+
+        Map<Character, Integer> counts = new HashMap<Character, Integer>();
+
+        
         for (char c : word.toCharArray()) {
             counts.put(c, counts.getOrDefault(c, 0) + 1);
         }
